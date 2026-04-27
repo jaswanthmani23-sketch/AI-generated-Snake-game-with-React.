@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --color-neon-pink: #ff00ff;
+  --color-neon-blue: #00ffff;
+  --color-neon-green: #39ff14;
+  --color-neon-purple: #9d00ff;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-black text-white font-sans antialiased;
+    background-image: 
+      radial-gradient(circle at 50% 50%, rgba(157, 0, 255, 0.05) 0%, transparent 50%),
+      linear-gradient(to bottom, #000 0%, #050505 100%);
+  }
+}
+
+@layer components {
+  .neon-border {
+    @apply border border-white/10;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.1);
+  }
+
+  .neon-text-pink {
+    text-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+  }
+
+  .neon-text-blue {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  }
+
+  .neon-glow-pink {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.3);
+  }
+
+  .neon-glow-blue {
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  }
+}
+
+.pixel-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
